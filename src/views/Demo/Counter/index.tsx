@@ -1,0 +1,33 @@
+import React from 'react';
+// import { connect } from 'react-redux';
+// import DrawerButton from '../../../shared/Buttons/DrawerButton';
+import styles from './styles.module.scss';
+import classNames from 'classnames';
+
+interface Props {
+  className?: string;
+  counter: number;
+}
+
+const Counter = ({ counter, className }: Props) => {
+  return (
+    <div className={classNames(styles.root, className)}>
+      <div>Check the Redux Devtools to see the dispatched actions.</div>
+      <a
+        href="https://github.com/zalmoxisus/redux-devtools-extension"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        (link)
+      </a>
+      <div className={styles.counter}>{counter}</div>
+      {/* <DrawerButton /> */}
+    </div>
+  );
+};
+
+// const mapStateToProps = state => ({
+//   counter: state.counter.counter
+// });
+
+export default Counter;
