@@ -1,8 +1,8 @@
 import React from 'react';
 // import { connect } from 'react-redux';
-// import DrawerButton from '../../../shared/Buttons/DrawerButton';
 import styles from './styles.module.scss';
 import classNames from 'classnames';
+import DrawerButton from 'components/Buttons/DrawerButton';
 
 interface Props {
   className?: string;
@@ -21,7 +21,7 @@ const Counter = ({ counter, className }: Props) => {
         (link)
       </a>
       <div className={styles.counter}>{counter}</div>
-      {/* <DrawerButton /> */}
+      <DrawerButton />
     </div>
   );
 };
