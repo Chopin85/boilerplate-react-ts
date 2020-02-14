@@ -3,30 +3,32 @@ import { closeDrawer } from '../../store/drawer/actions';
 import { useDispatch, useSelector, shallowEqual } from 'react-redux';
 import { RootState } from 'store/index';
 import CloseButton from '../Buttons/CloseButton';
-import './Drawer.css';
+import styles from './styles.module.scss';
+import classNames from 'classnames';
 
 interface Props {
   content: any;
   headerContent: any;
+  className?: string;
 }
 
-const Drawer = ({ headerContent, content }: Props) => {
+const Drawer = ({ className, headerContent, content }: Props) => {
   const dispatch = useDispatch();
 
-  const selectIsOpen = (state: RootState) => state.counter.counter;
+  const selectIsOpen = (state: RootState) => state.drawer.isOpen;
   const isOpen = useSelector(selectIsOpen, shallowEqual);
 
   if (!isOpen) {
-    return <section className="drawer" />;
+    return <section className={classNames(styles.root, className)} />;
   }
 
   return (
-    <section className="drawer open">
-      <div className="drawerHeader">
+    <section className={classNames(styles.root, styles.open)}>
+      <div className={styles.drawerHeader}>
         {headerContent}
         <CloseButton onClick={() => dispatch(closeDrawer())} />
       </div>
-      <div className="drawerContent">{content}</div>
+      <div className={styles.drawerContent}>{content}</div>
     </section>
   );
 };

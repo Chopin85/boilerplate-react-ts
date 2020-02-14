@@ -1,31 +1,30 @@
-.drawer {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    position: absolute;
-    z-index: 1000;
-    background-color: white;
-    right: 0;
-    top: 0;
-    width: 0;
-    min-width: 0;
-    transition: width 0.5s;
-}
-
-.open {
+.root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: absolute;
+  z-index: 1000;
+  background-color: white;
+  right: 0;
+  top: 0;
+  width: 0;
+  min-width: 0;
+  transition: width 0.5s;
+  &.open {
     width: 300px;
-}
+  }
 
-.drawerHeader {
+  .drawerHeader {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     padding: 15px 30px;
     background-color: cornflowerblue;
-}
+  }
 
-.drawerContent {
+  .drawerContent {
     height: 100%;
     padding: 10px;
-    border-left: 1px solid #CECECE;
+    border-left: 1px solid #cecece;
+  }
 }

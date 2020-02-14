@@ -21,7 +21,7 @@ export function counterReducer(
     case INCREMENT_COUNTER:
       return { ...state, counter: state.counter + 1 };
     case DECREMENT_COUNTER:
-      return { ...state, counter: state.counter + 1 };
+      return { ...state, counter: state.counter - 1 };
     case INCREMENT_COUNTER_WITH_VALUE:
       return { ...state, counter: state.counter + action.payload };
     case DECREMENT_COUNTER_WITH_VALUE:

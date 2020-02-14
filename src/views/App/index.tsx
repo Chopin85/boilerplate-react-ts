@@ -15,19 +15,17 @@ const App = ({ className }: Props) => {
   return (
     <div className={classNames(styles.root, className)}>
       <Router>
-        <div>
-          <Switch>
-            <Route path="/demo">
-              <Demo />
-            </Route>
-            <Route path="/login">
-              <Login />
-            </Route>
-            <Route path="/">
-              <Header />
-            </Route>
-          </Switch>
-        </div>
+        <Switch>
+          <Route path="/demo">
+            <Demo />
+          </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/">
+            <Header />
+          </Route>
+        </Switch>
       </Router>
     </div>
   );

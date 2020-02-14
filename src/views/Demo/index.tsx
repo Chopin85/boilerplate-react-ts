@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, shallowEqual } from 'react-redux';
-// import MainDrawer from '../../shared/Drawers/MainDrawer';
+import MainDrawer from '../../components/Drawers/MainDrawer';
 import Counter from './Counter';
 import styles from './styles.module.scss';
 import classNames from 'classnames';
@@ -17,7 +17,7 @@ const Demo = ({ className }: Props) => {
   return (
     <div className={classNames(styles.root, className)}>
       <Counter counter={value} />
-      {/* <MainDrawer /> */}
+      <MainDrawer />
     </div>
   );
 };
