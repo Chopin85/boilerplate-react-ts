@@ -55,24 +55,6 @@ const MainDrawer = () => {
         text="Reset counter"
         onClick={() => dispatch(resetCounter())}
       />
-
-      {/* <ActionButton buttonText="-1" text="Remove 1" onClick={decrement} />
-        <ActionButton
-          buttonText={`+${value}`}
-          text={`Add ${value}`}
-          onClick={() => incrementWithValue(value)}
-        />
-        <ActionButton
-          buttonText={`+${value}`}
-          text={`Remove ${value}`}
-          onClick={() => decrementWithValue(value)}
-        />
-        <ActionButton
-          buttonText={`=${value}`}
-          text={`Set to ${value}`}
-          onClick={() => setCounter(value)}
-        />
-        <ActionButton buttonText="Reset" text="Reset counter" onClick={reset} /> */}
     </div>
   );
 

@@ -4,28 +4,27 @@ import camelcaseKeys from 'camelcase-keys';
 
 const apiService = {
   async get(
-    path?: string,
+    path: string,
     disableCamelCase?: boolean,
     fullResponse: boolean = false
   ) {
-    const token = cookies.get('token');
-    if (!token) {
-      document.location.reload();
-    }
-
+    // const token = cookies.get('token');
+    // if (!token) {
+    //   document.location.reload();
+    // }
     try {
       const response = await axios({
         method: 'get',
-        url: `/${path}`,
-        headers: {
-          Authorization: `Bearer ${token}`
-        }
+        url: `${path}`
+        // headers: {
+        //   Authorization: `Bearer ${token}`
+        // }
       });
       return fullResponse
         ? response.data
         : disableCamelCase
         ? response.data.payload
-        : camelcaseKeys(response.data.payload, { deep: true });
+        : camelcaseKeys(response.data, { deep: true });
     } catch (error) {
       const customError = {
         code: error !== undefined ? error.response.status : 500,
@@ -97,7 +96,5 @@ const apiService = {
     }
   }
 };
-
-// window.apiService = apiService;
 
 export default apiService;

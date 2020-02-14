@@ -8,41 +8,45 @@ import {
   CounterActionTypes
 } from './types';
 
-export function incrementCounter(): CounterActionTypes {
+export const incrementCounter = (): CounterActionTypes => {
   return {
     type: INCREMENT_COUNTER
   };
-}
+};
 
-export function decrementCounter(): CounterActionTypes {
+export const decrementCounter = (): CounterActionTypes => {
   return {
     type: DECREMENT_COUNTER
   };
-}
+};
 
-export function incrementCounterWithValue(value: number): CounterActionTypes {
+export const incrementCounterWithValue = (
+  value: number
+): CounterActionTypes => {
   return {
     type: INCREMENT_COUNTER_WITH_VALUE,
     payload: value
   };
-}
+};
 
-export function decrementCounterWithValue(value: number): CounterActionTypes {
+export const decrementCounterWithValue = (
+  value: number
+): CounterActionTypes => {
   return {
     type: DECREMENT_COUNTER_WITH_VALUE,
     payload: value
   };
-}
+};
 
-export function setCounterToValue(value: number): CounterActionTypes {
+export const setCounterToValue = (value: number): CounterActionTypes => {
   return {
     type: SET_COUNTER,
     payload: value
   };
-}
+};
 
-export function resetCounter(): CounterActionTypes {
+export const resetCounter = (): CounterActionTypes => {
   return {
     type: RESET_COUNTER
   };
-}
+};

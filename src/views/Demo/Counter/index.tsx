@@ -1,5 +1,4 @@
 import React from 'react';
-// import { connect } from 'react-redux';
 import styles from './styles.module.scss';
 import classNames from 'classnames';
 import DrawerButton from 'components/Buttons/DrawerButton';
@@ -25,9 +24,5 @@ const Counter = ({ counter, className }: Props) => {
     </div>
   );
 };
-
-// const mapStateToProps = state => ({
-//   counter: state.counter.counter
-// });
 
 export default Counter;

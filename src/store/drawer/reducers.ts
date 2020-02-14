@@ -9,10 +9,10 @@ const initialState: DrawerState = {
   isOpen: false
 };
 
-export function drawerReducer(
+export const drawerReducer = (
   state = initialState,
   action: DrawerActionTypes
-): DrawerState {
+): DrawerState => {
   switch (action.type) {
     case OPEN_DRAWER:
       return { ...state, isOpen: true };
@@ -21,4 +21,4 @@ export function drawerReducer(
     default:
       return state;
   }
-}
+};

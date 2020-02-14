@@ -1,0 +1,22 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  .listHeader {
+    display: flex;
+    align-items: center;
+  }
+
+  .listHeader > button {
+    height: 20px;
+    align-items: center;
+  }
+
+  .listTitle {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    font-size: 25px;
+  }
+}

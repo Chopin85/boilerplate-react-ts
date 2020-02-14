@@ -23,13 +23,12 @@ const Header = ({ className }: Props) => (
       >
         Learn React
       </a>
-      <Link className={styles.link} to="/login">
-        Login Page
-      </Link>
       <Link className={styles.link} to="/demo">
         Demo Page
       </Link>
-      {/* <Link to="/got">API Game of Thrones</Link> */}
+      <Link className={styles.link} to="/apidemo">
+        API demo
+      </Link>
     </header>
   </div>
 );
