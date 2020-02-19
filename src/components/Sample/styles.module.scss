@@ -1,33 +1,4 @@
 @import-normalize;
 
 .root {
-  .label {
-    background-color: aqua;
-  }
-  .header {
-    width: 100%;
-    font-size: 30px;
-    color: #fff;
-    background-color: chocolate;
-  }
-  .view {
-    position: relative;
-    width: 100%;
-    background-color: grey;
-    .bg {
-      position: absolute;
-      display: flex;
-      width: 100%;
-      background-color: grey;
-      .page {
-        position: absolute;
-        width: 100%;
-        top: 0px;
-        left: 0px;
-      }
-    }
-  }
-  .clearfix {
-    clear: both;
-  }
 }

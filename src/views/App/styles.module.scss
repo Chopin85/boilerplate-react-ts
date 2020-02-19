@@ -2,4 +2,16 @@
 
 .root {
   height: 100vh;
+  position: relative;
+  .menu {
+    position: absolute;
+
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background-color: yellow;
+  }
+  .menuBar {
+    position: absolute;
+  }
 }
