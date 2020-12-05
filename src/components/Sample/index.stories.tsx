@@ -1,10 +1,16 @@
 import React from 'react';
-// import { action } from "@storybook/addon-actions";
-// import { Button } from "@storybook/react/demo";
-import Sample from './index';
+import { Story, Meta } from '@storybook/react/types-6-0';
+
+import { Sample, SampleProps } from './index';
 
 export default {
-  title: 'Components/Sample'
-};
+  title: 'Components/Sample',
+  component: Sample,
+} as Meta;
 
-export const Text = () => <Sample message="Hello"></Sample>;
+const Template: Story<SampleProps> = (args) => <Sample {...args} />;
+
+export const Primary = Template.bind({});
+Primary.args = {
+  message: 'Hello',
+};

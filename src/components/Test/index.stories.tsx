@@ -2,13 +2,13 @@ import React from 'react';
 import Test from './index';
 
 export default {
-  title: 'Components/Test'
+  title: 'Components/Test',
 };
 
 export const DefaultStory = () => <Test></Test>;
 
 DefaultStory.story = {
-  name: 'default'
+  name: 'default',
 };
 
 const labels = ['Bonjour', 'le', 'monde'];

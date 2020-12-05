@@ -8,7 +8,7 @@ import Menu from './index';
 const Center = ({ children }: any) => (
   <div
     style={{
-      height: '500px'
+      height: '500px',
     }}
   >
     {children}
@@ -22,12 +22,12 @@ export default {
       <MemoryRouter>
         <Center>{storyFn()}</Center>
       </MemoryRouter>
-    )
-  ]
+    ),
+  ],
 };
 
 export const DefaultStory = () => <Menu onClick={() => console.log('ok')} />;
 
 DefaultStory.story = {
-  name: 'default'
+  name: 'default',
 };

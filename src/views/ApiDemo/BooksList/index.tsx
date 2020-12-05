@@ -21,7 +21,7 @@ const BooksList = ({ className }: Props) => {
   const Books = isLoadingBooks ? (
     <Spinner />
   ) : (
-    books.map(book => <Book key={book.url} name={book.name} />)
+    books.map((book) => <Book key={book.url} name={book.name} />)
   );
 
   return (

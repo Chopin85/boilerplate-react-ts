@@ -49,11 +49,9 @@ const App = ({ className }: Props) => {
           onClick={() => setisOpen(false)}
         />
         <Switch>
+          <Route exact path="/" component={Header} />
           <Route path="/apidemo" component={ApiDemo} />
           <Route path="/demo" component={Demo} />
-          <Route path="/" component={Header}>
-            <Header />
-          </Route>
         </Switch>
       </Router>
     </div>

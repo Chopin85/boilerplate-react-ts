@@ -1,11 +1,11 @@
-import React, { useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 
-interface Props {
+export interface SampleProps {
   message: string;
 }
 
-const Sample = ({ message }: Props) => {
+export const Sample = ({ message }: SampleProps) => {
   const divRef = useRef(null);
   useEffect(() => {
     var tl = gsap.timeline({ repeat: 2, repeatDelay: 1 });
@@ -19,4 +19,3 @@ const Sample = ({ message }: Props) => {
     </div>
   );
 };
-export default Sample;
