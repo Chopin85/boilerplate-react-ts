@@ -1,9 +1,13 @@
 import React from 'react';
-// import { action } from "@storybook/addon-actions";
-// import { Button } from "@storybook/react/demo";
+import { Story, Meta } from '@storybook/react/types-6-0';
 import { MemoryRouter } from 'react-router';
+
 import Menu from './index';
-// import './story.css';
+
+interface Props {
+  className?: string;
+  onClick: () => void;
+}
 
 const Center = ({ children }: any) => (
   <div
@@ -17,17 +21,18 @@ const Center = ({ children }: any) => (
 
 export default {
   title: 'Components/Menu',
-  decorators: [
-    (storyFn: any) => (
-      <MemoryRouter>
-        <Center>{storyFn()}</Center>
-      </MemoryRouter>
-    ),
-  ],
-};
+  component: Menu,
+} as Meta;
 
-export const DefaultStory = () => <Menu onClick={() => console.log('ok')} />;
+const Template: Story<Props> = (args) => (
+  <MemoryRouter>
+    <Center>
+      <Menu {...args} />
+    </Center>
+  </MemoryRouter>
+);
 
-DefaultStory.story = {
-  name: 'default',
+export const Primary = Template.bind({});
+Primary.args = {
+  onClick: () => console.log('hello'),
 };

@@ -1,15 +1,18 @@
 import React from 'react';
+import { Story, Meta } from '@storybook/react/types-6-0';
+
 import Test from './index';
 
 export default {
   title: 'Components/Test',
-};
+  component: Test,
+} as Meta;
 
-export const DefaultStory = () => <Test></Test>;
-
-DefaultStory.story = {
-  name: 'default',
-};
+const Template: Story = (args) => <Test {...args} />;
 
 const labels = ['Bonjour', 'le', 'monde'];
-export const withLabels = () => <Test labels={labels}></Test>;
+
+export const Primary = Template.bind({});
+Primary.args = {
+  labels,
+};
