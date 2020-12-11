@@ -1,3 +1,7 @@
+![CI/CD](https://github.com/Chopin85/boilerplate-react-ts/workflows/CI/CD/badge.svg)
+
+![License](https://img.shields.io/github/license/Chopin85/boilerplate-react-ts)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
