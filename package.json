@@ -70,5 +70,5 @@
     "@storybook/react": "^6.1.10",
     "dotenv": "^8.2.0"
   },
-  "homepage": "https://chopin85.github.io/boilerplate-react-ts"
+  "homepage": "https://chopin85.github.io"
 }
